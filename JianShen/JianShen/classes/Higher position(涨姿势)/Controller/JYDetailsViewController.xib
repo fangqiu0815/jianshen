@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JYDetailsViewController">
+            <connections>
+                <outlet property="contentWebView" destination="6QR-yE-n7u" id="CZ5-EK-Rcd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTq-B7-zAt">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZL-ml-HD7">
+                            <rect key="frame" x="188" y="0.0" width="187" height="50"/>
+                            <state key="normal" title="收藏" image="collection">
+                                <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="highlighted" image="collection_1">
+                                <color key="titleColor" red="0.98823529409999999" green="0.22352941179999999" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="collectionBtn:" destination="-1" eventType="touchUpInside" id="2xj-Kx-ZG5"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujz-fJ-GEq">
+                            <rect key="frame" x="0.0" y="0.0" width="188" height="50"/>
+                            <state key="normal" title="有用" image="like">
+                                <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="highlighted" image="like_1">
+                                <color key="titleColor" red="0.98823529409999999" green="0.22352941179999999" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="ThumbupBtn:" destination="-1" eventType="touchUpInside" id="YQm-jl-aiN"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="6ZL-ml-HD7" firstAttribute="top" secondItem="MTq-B7-zAt" secondAttribute="top" id="HXy-Xt-dEO"/>
+                        <constraint firstItem="ujz-fJ-GEq" firstAttribute="top" secondItem="MTq-B7-zAt" secondAttribute="top" id="IZl-lT-IyL"/>
+                        <constraint firstAttribute="height" constant="50" id="Lcu-E5-izz"/>
+                        <constraint firstItem="6ZL-ml-HD7" firstAttribute="leading" secondItem="ujz-fJ-GEq" secondAttribute="trailing" id="QG9-wC-mV0"/>
+                        <constraint firstItem="ujz-fJ-GEq" firstAttribute="leading" secondItem="MTq-B7-zAt" secondAttribute="leading" id="dXL-NY-8fX"/>
+                        <constraint firstItem="6ZL-ml-HD7" firstAttribute="height" secondItem="ujz-fJ-GEq" secondAttribute="height" id="ecE-k1-rXl"/>
+                        <constraint firstItem="6ZL-ml-HD7" firstAttribute="width" secondItem="ujz-fJ-GEq" secondAttribute="width" id="i6i-OT-jCZ"/>
+                        <constraint firstAttribute="trailing" secondItem="6ZL-ml-HD7" secondAttribute="trailing" id="nwr-9f-GFv"/>
+                        <constraint firstAttribute="bottom" secondItem="ujz-fJ-GEq" secondAttribute="bottom" id="ykd-do-qMr"/>
+                    </constraints>
+                </view>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6QR-yE-n7u">
+                    <rect key="frame" x="0.0" y="64" width="375" height="553"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="MTq-B7-zAt" secondAttribute="trailing" id="6Wz-bn-41J"/>
+                <constraint firstItem="6QR-yE-n7u" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="T96-KB-Ka0"/>
+                <constraint firstItem="MTq-B7-zAt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XYo-Lv-bTV"/>
+                <constraint firstItem="MTq-B7-zAt" firstAttribute="top" secondItem="6QR-yE-n7u" secondAttribute="bottom" id="dXe-El-aQm"/>
+                <constraint firstAttribute="bottom" secondItem="MTq-B7-zAt" secondAttribute="bottom" id="njX-OY-k3b"/>
+                <constraint firstItem="6QR-yE-n7u" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="pXh-7t-D1r"/>
+                <constraint firstAttribute="trailing" secondItem="6QR-yE-n7u" secondAttribute="trailing" id="xZt-Y2-YZa"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="collection" width="25" height="25"/>
+        <image name="collection_1" width="25" height="25"/>
+        <image name="like" width="28" height="25"/>
+        <image name="like_1" width="28" height="25"/>
+    </resources>
+</document>
